@@ -1,0 +1,3 @@
+UserId,AppId,Recommendations,PlaytimeForever,Playtime2Weeks,MetacriticScore,FinalPrice,Publishers,Developers,Categories
+{{range .}}{{range .Games}}ID{{.UserId}},App{{.Appid}},{{.GameDetail.Recommendations.Total}},{{.PlaytimeForever}},{{.Playtime2Weeks}},{{.GameDetail.Metacritic.Score}},{{.GameDetail.PriceOverview.Final}},{{.GameDetail.Publishers}},{{.GameDetail.Developers}},{{range .GameDetail.Categories}}{{.ID}}-{{end}}
+{{end}}{{end}}
